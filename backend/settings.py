@@ -418,24 +418,25 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 CMS_PERMISSION = True
 
+LANGUAGE_CODE = 'id'
 
 LANGUAGES = [
-    ('en', "English"),
-    ('de', "German"),
+    ('en', "Indoneisa"),
+    ('id', "English"),
 ]
 CMS_LANGUAGES = {
     SITE_ID: [
         {
+            'code': 'id',
+            'name': 'Indonesia',
+        },
+        {
             'code': 'en',
             'name': 'English',
         },
-        {
-            'code': 'de',
-            'name': 'German',
-        },
     ],
     'default': {
-        'fallbacks': ['en', 'de'],
+        'fallbacks': ['id', 'en'],
         'redirect_on_fallback': True,
         'public': True,
         'hide_untranslated': False,

@@ -144,11 +144,11 @@ if (isDevelopmentMode) {
     config.output.publicPath = 'http://localhost:8090/';
 }
 
-const isDockerMode = process.env.NODE_ENV === 'docker';
-if (isDockerMode) {
-    config.devServer.watchOptions = {
-        poll: 100, // enable polling since fsevents are not supported in docker
-    };
+ const isDockerMode = process.env.NODE_ENV === 'docker';
+ if (isDockerMode) {
+     config.devServer.watchOptions = {
+         poll: 100, // enable polling since fsevents are not supported in docker
+     };
 }
 
 module.exports = config;
